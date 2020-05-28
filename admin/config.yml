@@ -1,8 +1,7 @@
 backend:
-name: github
-repo: reynanicolette/cssdesign # Path to your GitHub repository
-branch: master # Branch to update (optional; defaults to master)
-# This line should *not* be indented
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
 publish_mode: editorial_workflow
 
 local_backend: true
