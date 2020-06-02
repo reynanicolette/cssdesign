@@ -46,31 +46,13 @@
             var entry = this.props.entry;
             var image = entry.getIn(['data', 'image']);
             var bg = this.props.getAsset(image);
-            return html`
-            <body>
-                <main id="tutorial">
-                    <section>
-                        <article>
-                            <h1>${title}</h1>
-                        </article>
-                    </section>
-                    <section>
-                        <article>
-                            ${body}
-                        </article>
-                    </section>
-                    <footer>
-                        <ul>
-                            <li><a href="../index.html"><span>Back</span><span>To Home</span></a></li>
-                            <li><a href="../tutorials/04-ftp.html"><span>Tutorial 4:</span><span>FTP</span></a></li>
-                            <li><a href="../tutorials/coming-soon.html"><span>Tutorial 5:</span><span>Images</span></a></li>
-                        </ul>
-                    </footer>
-                </main>
-            </body>
-                `;
-                }
-                });
+            return h('div', {},
+                h('h1', {}, entry.getIn(['data', 'title'])),
+                h('img', {src: bg.toString()}),
+                h('div', {"className": "text"}, this.props.widgetFor('body'))
+                );
+            }
+        });
         
         import CMS from 'netlify-cms'
         // Now the registry is available via the CMS object.
