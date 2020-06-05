@@ -44,12 +44,13 @@
         </section>
         <section>
             <article>
+                <h2>Creating a Base file</h2>
                 <p>The best way for me to discuss each one is to put it into practice, so I will be using the composition for <a href="https://www.figma.com/file/KDzyOmPcyndqyB0Sx4954x/CSS-Design-For-Students?node-id=0%3A1">Exercise 4</a></p>
                 <p>At this point, we know how to write our HTML depending on the comp, but let’s review.</p>
                 <p>I will be using the composition (comp) for Exercise 4 as a guide. You may follow along, but in the directions of Exercise 4, I tell you what I’m looking for specifically.</p>
                 <p>I created this file in <a href="https://www.figma.com/">Figma</a>.</p>
                 <p>Create an account to access the file. It’s a view only file, but it allows you to export the images, gather fonts, and colors. </p>
-                <img src="images/tutorial 06/tutorial06_01.gif">
+                <img src="../images/tutorial 06/tutorial06_01.gif">
                 <p>View > Layout Grids to see the grids I put in place. I made a 12 column grid system where each column gap is 16px or 1rem.</p>
                 <p>All the spacing is divisible by 16, so I expect to see you use rems for your units.</p>
                 <p>Anyway, back to the HTML. I want you to create a base for every web page you plan on creating in the future. This folder can be copied and renamed to help you start your new folder:</p>
@@ -74,27 +75,300 @@
                         </ol>
                     </li>
                 </ol>
+                <h3>Base stylesheet</h3>
+                <p>Reset your document using the <code>*</code> selector:</p>
+                <ol class="margin-btm2">
+                    <li>Set your margins to 0</li>
+                    <li>Set your padding to 0</li>
+                    <li>Set your box-sizing to border box.</li>
+                </ol>
+                <h3>Base HTML</h3>
+                <p>Add the base HTML and link your CSS file.</p>
+<pre><code class="block"><<span class="hidden">*</span>!doctype html>
+    <<span class="hidden">*</span>html lang="en">
+    <<span class="hidden">*</span>head>
+        <<span class="hidden">*</span>meta charset="utf-8">
+        <<span class="hidden">*</span>title>HTML5 Starter Template<<span class="hidden">*</span>/title>
+        <<span class="hidden">*</span>link rel="stylesheet" href="css/styles.css">
+    <<span class="hidden">*</span>/head>
+    <<span class="hidden">*</span>body>
+        <<span class="hidden">*</span>!-- Content --<span class="hidden">*</span>> 
+    <<span class="hidden">*</span>/body>
+<<span class="hidden">*</span>/html></code></pre>
+                <p>Save this base in a place you can easily access later. Now you can copy the folder and name it for whatever purpose.</p>
+                <p>Open your HTML file so we can work on filling the content.</p>
+                <p>In the Figma file, It’s so important that you ignore most of the position css on the right sidebar. It will help with font sizes, font colors, and background colors, but that’s all you’ll use.</p>
+                <img src="../images/tutorial 06/tutorial06_02.png" class="col-4">           
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>HTML Sections</h2>
+                <h3>Section 1</h3>
+                <p>The first section introduces the Exercise with two images. We have to account for the columns.</p>
+<pre><code class="block"><<span class="hidden">*</span>section> 	
+    <<span class="hidden">*</span>article>
+        <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+        <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+        <<span class="hidden">*</span>div><<span class="hidden">*</span>/div>
+    <<span class="hidden">*</span>/article>
+<<span class="hidden">*</span>/section></code></pre>
+                <h3>Section 2</h3>
+                <p>The second section has two columns. One image on the left and text on the right.</p>
+<pre><code class="block"><<span class="hidden">*</span>section> 
+    <<span class="hidden">*</span>article>
+        <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+        <<span class="hidden">*</span>div><<span class="hidden">*</span>/div>
+    <<span class="hidden">*</span>/article>
+<<span class="hidden">*</span>/section></code></pre>
+                <h3>Section 3</h3>
+                <p>The third section has a background image with one column of content.</p>
+<pre><code class="block"><<span class="hidden">*</span>section> 
+    <<span class="hidden">*</span>article>
+        <<span class="hidden">*</span>div><<span class="hidden">*</span>/div>
+    <<span class="hidden">*</span>/article>
+<<span class="hidden">*</span>/section></code></pre>
+                <h3>Section 4</h3>
+                <p>The fourth section has two rows. The first row just has text. The second row has four images in four columns.</p>
+                <p>There are a few ways to go about this, but I’ll simply use two divs.</p>
+<pre><code class="block"><<span class="hidden">*</span>section> 	
+    <<span class="hidden">*</span>article>
+        <<span class="hidden">*</span>div><<span class="hidden">*</span>/div>
+        <<span class="hidden">*</span>div>
+            <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+            <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+            <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+            <<span class="hidden">*</span>figure><<span class="hidden">*</span>/figure>
+        <<span class="hidden">*</span>/div>
+    <<span class="hidden">*</span>/article>
+<<span class="hidden">*</span>/section></code></pre>
+                <h3>Section 5</h3>
+<pre><code class="block"><<span class="hidden">*</span>section> 	
+    <<span class="hidden">*</span>article>
+        <<span class="hidden">*</span>figure></figure>
+        <<span class="hidden">*</span>div></div>
+    <<span class="hidden">*</span>/article>
+<<span class="hidden">*</span>/section></code></pre>
+                <h3>Adding Content</h3>
+                <p>Once you break down the page by the amount of sections, rows, and columns, you can add in the images.</p>
+                <p>To export, you can ungroup the sections and select the images. In the bottom right hand corner is an export button. It’ll save a zip to your computer and you can transfer the images to your images folder.</p>
+                <img src="../images/tutorial 06/tutorial06_03.gif">
+                <img src="../images/tutorial 06/tutorial06_04.gif">   
+                <p>Then, add the text and images into your HTML. Select an image to see the name on the sidebar. You can double click the text boxes to copy and paste.</p>
+                <img src="../images/tutorial 06/tutorial06_05.gif">
+                <p>The only image you are <em><strong>not</strong></em> importing right now is the background image. That will be added to the CSS.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Styling your content</h2>
+                <p>The CSS gets a little more complicated. In this lesson, we will break down each section and Use different layout techniques. It will be a little overwhelming at first, but understanding these techniques will help you a lot as you build more and more websites!</p>
+                <p>Because this CSS is your base file, you have already reset the page.</p>
+                <p>In Figma, drag the page to the style guide artboard. Now, let’s set up our font styles, colors, and grid.</p>
+                <p>Import your font family from google fonts. If you prefer to add this to your HTML, go ahead! You can figure out which font is used by selecting the text. On the sidebar, it’ll tell you what is used. Click all of the text to figure out which styles to activate. </p>
+                <p>In your global styles section, comment out your colors. This is so you don’t have to go back and forth copying and pasting. Use a keyword that makes sense to you so that you don’t get confused by random hex codes.</p>
+<pre><code class="block">*/ Global styles 
+	gold: #F3D05D
+	peach: #FFB191
+	gray: #E8E5D8
+	black: #394247
+/*</code></pre>
+                <p>We can’t forget to style the body, import fonts, container, and clearfix under the reset.</p>
+                <div class="col-wrapper">
+                    <div class="col-8">
+<pre><code class="block">*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-            </article>
-        </section>
-        <section>
-            <article>
-                
-            </article>
-        </section>
-        <section>
-            <article>
-                
-            </article>
-        </section>
-        <section>
-            <article>
-                
-            </article>
-        </section>
-        <section>
-            <article>
-                
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
+
+body {
+	background: #ffffff;
+	font: 300 16px/1.5rem “Montserrat”, Helvetica, Arial, sans-serif;
+	color: #394247;
+}
+
+article { 	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.clearfix::after {
+	content: “”;
+	clear: both;
+	display: table;
+}
+img {
+	width: 95%;
+}</code></pre>
+                    </div>
+                    <div class="col-4">
+                        <ol>
+                            <li>I created a container with the article because there’s no navigation to create a container with and no footer either.</li>
+                            <li>I set the width for all images to 95% so they’d fill the available space with just enough to create breathing room between all elements.</li>
+                        </ol>
+                    </div>
+                </div>
+                <h3>Grids</h3>
+                <p>It’s time to set up your grid in your CSS. Doing this ahead of time saves you later when you’re attaching classes to your HTML elements. This is a new concept, and very helpful, so take notes!</p>
+                <p>You can name the columns in CSS based on the <em>amount</em> of columns they take up in the design.</p>
+                <p>So a column that takes up 50% of the full width of the container on your web page is 6 columns in your design.</p>
+<pre><code class="block">.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33333%;
+}
+
+.col-6 { 	
+    width: 50%;
+}
+
+.col-8 {
+	width: 66.666666%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-12 {
+	width: 100%;
+}</code></pre>
+                <p>Alternatively, you can name your columns based on the fraction of the container.</p>
+<pre><code class="block">.quarter-width {
+	width: 25%
+}
+
+.third-width {
+	width: 33.33333%
+}
+
+.half-width {
+    
+    width: 50%;
+}
+.two-thirds-width {
+	width: 66.666666%;
+}
+
+.three-quarters-width {
+	width: 75%;
+}
+
+.full-width {
+	width: 100%;
+}</code></pre>
+                <p>Either way, these are the basic columns you might use in your designs in the future!</p>
+                <p>Now you can style your headings.</p>
+                <p>What do they have in common? What makes them different? </p>
+                <p>This is where you can determine whether you should declare the HTML or create a class.</p>
+                <p>There are three headings in this document, but a document may have up to 6.</p>
+                <p>Since there’s not a lot in common between these items, you’ll have to call to them individually</p>
+                <p>I will use rems and shorthand to make this process faster.</p>
+<pre><code class="block">h1 { 
+    font: 600 4rem/4.5rem “Montserrat”;
+}
+    
+h2 {
+    font: 500 2rem/2.5rem “Montserrat”;
+}
+    
+h3 
+    font: 400 1.5rem/2rem “Montserrat”;
+    letter-spacing: .25rem;
+}</code></pre>
+                <p><em><strong>Note:</strong></em> In order for the <code>font</code> shorthand to work, you have to have the font name, which is a little redundant, but still more efficient nonetheless!</p>
+                <p>In print, designers refer to the space between the letters tracking. In CSS, it is referred to as letter-spacing. <a href="https://www.w3schools.com/cssref/pr_text_letter-spacing.asp">Check out this article to see how to use letter spacing.</a> To see what units are possible in web in general, <a href="https://www.w3schools.com/cssref/css_units.asp">check this out</a>. Since the letter spacing in the document is .25em, I will use that amount in rems.</p>
+                <p>Depending on your design, you might need to use a class to declare uppercase. In this comp, the uppercase is attached to two of our headings, but not all <code><<span class="hidden">*</span>h1></code>, so we need to create a class. Do NOT forget to add this class to the proper elements in the HTML</p>
+<pre><code class="block">.text-uppercase {
+    text-transform: uppercase;
+}
+</code></pre>
+                <h3>General Sections</h3>
+                <p>To add enough spacing for the <code><<span class="hidden">*</span>section></code>, it will be 5rem (equivalent of 80px) on the top and bottom.</p>
+<pre><code class="block">section {
+    padding: 5rem 0;
+}
+</code></pre>
+                <p>We can color the first two sections too using the <code>:nth-of-type()</code> pseudoclass. Instead of odd and even, we can use 1 & 2 for the first two sections.</p>
+                <p>We can apply a background image to the 3rd section as well.</p>
+                <p>This exercise is good practice for specificity. If this were a larger website, it might be a good idea to use an ID for these sections.</p>
+<pre><code class="block">section:nth-of-type(1) {
+    background: #E8E5D8;
+}
+section:nth-of-type(2) {
+    background: #FFB190;
+}
+section:nth-of-type(3) {
+    background: url("../images/physalis-bg.png") no-repeat top center;
+    background-size: cover;
+}
+</code></pre>
+                <h3>Section 1</h3>
+                <p>In this section, we will use floats to create the columns.</p>
+                <p>We already added a clearfix class in our CSS, but we need to add the class in the HTML to the appropriate element. In this case, it’s the <code><<span class="hidden">*</span>article></code>.</p>
+                <p>I created an ID of #floats and attached it to the <*article> so that I can use specificity to style the children (<code><<span class="hidden">*</span>figure></code> and <code><<span class="hidden">*</span>div></code>).</p>
+<pre><code class="block">#floats-left figure, #floats-left div {
+    float: left;
+}
+#floats-left div {
+    padding: 4rem 0;
+}
+</code></pre>
+                <h3>Section 2</h3>
+                <p>In this section, we will use a new concept. Take your notepad out! It’s called flexbox. There are several resources to help you learn. We’re going to create horizontal columns.</p>
+                <p>I will apply an ID to the article called #flex.</p>
+<pre><code class="block">#flex {
+    display: flex; 
+    align-items: center;
+}
+#flex h2 {
+    margin-bottom: 1rem;
+}
+</code></pre>
+                <p>All of the default flex properties created horizontal columns.</p>
+                <p><a href="https://yoksel.github.io/flex-cheatsheet/">Flex Cheatsheet</a>: Play around with it to familiarize yourself with the properties.</p>
+                <p><a href="https://www.w3schools.com/css/css3_flexbox.asp">The breakdown of each property.</a></p>
+                <p>Apply flex value to the <strong><em>parent</em></strong> element. </p>
+                <p><em>Take the time to understand and practice if you need to.</em></p>
+                <h3>Section 3</h3>
+                <p>We will use floats again to style this section.</p>
+<pre><code class="block">#floats-right div {
+    float: right;
+    text-align: center;
+    padding: 10.5rem 0;
+    background: #ffffff;
+}
+</code></pre>
+                <h3>Section 4</h3>
+                <p>We will use a concept here to style your content. It’s called CSS Grid.</p>
+                <p><a href="https://learncssgrid.com/">Learn CSS Grid</a></p>
+                <p><em>Take the time to understand and practice if you need to.</em></p>
+                <p>First, we need to center the <code><<span class="hidden">*</span>h1></code></p>
+<pre><code class="block">#grid div:first-of-type {
+    text-align: center;
+}
+
+#grid div h1 {
+    margin-bottom: 1rem;
+}
+
+#grid div:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+</code></pre>
+                <p><strong>Note:</strong> These are very simple layouts, and as we move forward, you may use more properties for Flexbox or CSS Grid, so get to know these now while you code this exercise and project. Practice makes perfect! But without the practice, you might not understand these concepts completely.</p>
+                <p>For the last section, you can use any of the three layout concepts.</p>
+                <ol>
+                    <li>Floats</li>
+                    <li>Flexbox</li>
+                    <li>CSS Grid</li>
+                </ol>
             </article>
         </section>
         <section>
