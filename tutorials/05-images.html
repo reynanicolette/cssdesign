@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS Design | GRA 2723C </title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/ilh7abw.css">
+  </head>
+  <body>
+    <aside>
+        <nav id="tutorial-nav">
+            <ul>
+                <li><h4 class="txt-white">Tutorial 4: FTP</h4></li>
+                <li><a href="../index.html" class="navlink">Back Home</a></li>
+                <li><a href="#intro" class="navlink">Intro</a></li>
+                <li><a href="#display" class="navlink">Displaying images in HTML</a></li>
+                <li><a href="#bg-imgs" class="navlink">Background Images</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="tutorial">
+        <section>
+            <article>
+                <h1>Images</h1>
+            </article>
+        </section>
+        <section id="intro">
+            <article>
+                <div>
+                    <p>Images can be used in many different scenarios on your website. In this tutorial, we will touch on a few instances that will be helpful to you.</p>
+                    <p>The img tag displays an image on your site.</p>
+                    <p><code><<span class="hidden">*</span>img src="url" alt="Description"> </code></p>
+                    <p>We know that the src attribute is where the url or path to the image is. The alt attribute is a short description describing the image in case the image doesn’t show up or the page is being read by screen readers. Keep your descriptions short, but clear so the user understands what is going on in the image. </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="display">
+            <article>
+                <h2>Displaying images in HTML</h2>
+                <p>You can start with the <code><<span class="hidden">*</span>figure></code> tag. Inside of it will be your <code><<span class="hidden">*</span>img></code> and, if necessary, a <code><<span class="hidden">*</span>figcaption></code></p>
+<pre><code class="block"><<span class="hidden">*</span>figure>
+    <<span class="hidden">*</span>img src="" alt="Marinara Sauce">
+    <<span class="hidden">*</span>figcaption>This is a caption.<<span class="hidden">*</span>/figcaption>
+<<span class="hidden">*</span>/figure></code></pre>
+                <p><em>The only places you might not use this are instances of your logo and instances of icons. PLEASE keep that in mind.</em></p>
+
+<pre><code class="block">figure {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+  }</code>
+</pre>
+                <p>The <code><<span class="hidden">*</span>figcaption></code>’s default CSS is only that it’s a block element. It defines the image, but it’s not necessary. </p>
+                <p>You can also display the <code><<span class="hidden">*</span>img></code> by itself, but remember, using proper semantics now might help you in the future when you know more. What if you want a really cool hover effect on an image where a caption is revealed? Your knowledge of <code><<span class="hidden">*</span>figure></code> and <code><<span class="hidden">*</span>figcaption></code> will help!
+                </p>
+
+            </article>
+        </section>
+
+        <section id="bg-imgs">
+            <article>
+                <h2>Background Images</h2>
+                <p>If you want to display an image as a background, you’ll have to use CSS.</p>
+                <p>All you have to do is decide where it belongs. Is it in your section (full width of browser)? Is it in your article (within the confines of your container)?</p>
+                <p>Either way, a background image will be defined in your CSS.</p>
+                <p>Let’s say, I have a section as follows.</p>
+<pre><code class="block"><<span class="hidden">*</span>section id="location">
+    <<span class="hidden">*</span>article class="container clearfix">
+        <<span class="hidden">*</span>div class="float-left"></div>
+    <<span class="hidden">*</span>/article>
+ <<span class="hidden">*</span>/section></code></pre>
+                <p>The <code><<span class="hidden">*</span>section></code> is a full width element that holds the <code><<span class="hidden">*</span>article></code>, which in this case, is our container. In your css, instead of adding a background image to all sections, you can specifically set it to <code>#location</code></p>
+                <div class="col-wrapper margin-btm2">
+                    <div class="col-6">
+<pre><code class="block">#location {
+    background-image: url("/images/bg.jpg");
+    background-size: cover;
+    background position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    }</code></pre>
+                    </div>
+                    <div class="col-6">
+                        <ol>
+                            <li>I set the url to whatever path is necessary to find the image. </li>
+                            <li>The background size is set to cover which means the background image will always fill up the space of the element it's on. <a href="https://www.w3schools.com/cssref/css3_pr_background-size.asp">Check out this resource</a></li>
+                            <li>The background-position has several values available. <a href="https://www.w3schools.com/cssref/pr_background-position.asp">I would check out this resource to help you determine what you can use.</a></li>
+                            <li>The background-attachment scrolls with he page on default, but you can place it fixed to the page so the elements scroll independently from it. It gives a really cool parallax effect without using javascript. <a href="https://www.w3schools.com/cssref/pr_background-attachment.asp">I would check out this resource</a>.</li>
+                            <li>The background-repeat allows you to set the repetition of the image. If it’s a hero image, it will most likely not be repeated. But background patterns will be repeated. <a href="https://www.w3schools.com/cssref/pr_background-repeat.asp">Check out this resource</a>.</li>
+                        </ol>
+                    </div>
+                </div>
+                <p>There are other properties for setting the background and you can check them out here. We will learn more about other background properties in the coming tutorials. <a href="https://www.w3schools.com/cssref/css3_pr_background.asp">There’s also a shorthand property which is useful to learn to cut down your time writing CSS.</a></p>
+                <p>Move onto the next tutorial to further implement these skills.</p>
+            </article>
+        </section>
+
+        <footer>
+            <ul>
+                <li><a href="../index.html"><span>Back</span><span>To Home</span></a></li>
+                <li><a href="#"><span>Tutorial 6:</span><span>Content</span></a></li>
+                <li><a href="#"><span>Tutorial 7:</span><span>Forms</span></a></li>
+            </ul>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
