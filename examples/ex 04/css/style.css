@@ -1,0 +1,134 @@
+/* global */
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
+
+body {
+	background: #ffffff;
+	font: 300 16px/1.5rem “Montserrat”, Helvetica, Arial, sans-serif;
+	color: #394247;
+}
+
+article {
+    width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+img {
+	width: 95%;
+}
+
+/* grid */
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33333%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-8 {
+	width: 66.666666%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+/* typography */
+h1 { 
+	font: 600 4rem/4.5rem "Montserrat";
+}
+
+h2 {
+	font: 500 2rem/2.5rem "Montserrat";
+}
+
+h3 {
+	font: 400 1.5rem/2rem "Montserrat";
+	letter-spacing: .25rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+/* all sections */
+section {
+	padding: 5rem 0;
+}
+
+section:nth-of-type(1) {
+	background: #E8E5D8;
+}
+
+section:nth-of-type(2) {
+	background: #FFB190;
+}
+
+section:nth-of-type(3) {
+	background: url("../images/physalis-bg.png") no-repeat top center;
+	background-size: cover;
+}
+
+/* section 1 */
+#floats-left figure, #floats-left div {
+	float: left;
+}
+
+#floats-left div {
+	padding: 4rem 0;
+}
+
+/* section 2 */
+#flex {
+	display: flex;
+	align-items: center;
+}
+#flex h2 {
+	margin-bottom: 1rem;
+}
+
+/* section 3 */
+#floats-right div {
+	float: right;
+	text-align: center;
+	padding: 10.5rem 0;
+	background: #ffffff;
+}
+
+/* section 4 */
+#grid div:first-of-type {
+	text-align: center;
+}
+
+#grid div h1 {
+	margin-bottom: 1rem;
+}
+
+#grid div:last-of-type {
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+}
+
+/* section 5 */
+
