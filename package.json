@@ -1,7 +1,0 @@
-{
-    "name": "cssdeisgn",
-    "version": "0.0.0",
-    "dependencies": {
-        "netlify-cms": "^2.10.50"
-    }
-}
