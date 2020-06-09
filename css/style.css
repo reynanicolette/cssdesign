@@ -273,3 +273,41 @@ code.note::after {
 #soon a {
     color: var(--white10);
 }
+
+#form-ex input, #input-ex input {
+    outline: 0;
+    border: 0;
+    border-radius: .25rem;
+    background: var(--gray01);
+    width: 100%;
+    padding: 1rem;
+    margin: 0 0 2rem 0;
+    font: 400 1rem/1rem "Open Sans";
+}
+
+#form-ex input:hover {
+    opacity: .6;
+}
+
+#form-ex input[type="text"]:focus {
+    background: var(--red);
+}
+
+#form-ex label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+
+#form-ex input[type="submit"] {
+    font-weight: 600;
+}
+
+#input-ex input[type="text"]::placeholder {
+    color: var(--gray06);
+}
+
+#input-ex input[type="text"]:focus {
+    color: var(--gray10);
+    background: var(--gray03);
+}
