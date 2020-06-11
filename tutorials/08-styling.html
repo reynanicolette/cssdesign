@@ -11,10 +11,9 @@
     <aside>
         <nav id="tutorial-nav">
             <ul>
-                <li><h4 class="txt-white">Tutorial 6: Organizing Content</h4></li>
+                <li><h4 class="txt-white">Tutorial 8: Styling Miscellaneous Content</h4></li>
                 <li><a href="../index.html" class="navlink">Back Home</a></li>
-                <li><a href="#markup" class="navlink">Markup of Forms</a></li>
-                <li><a href="#markup" class="navlink">Styling Forms</a></li>
+
                 <li><a href="#exercise" class="navlink">Exercise</a></li>
                 <li><a href="#project" class="navlink">Project</a></li>
             </ul>
@@ -24,330 +23,52 @@
     <main id="tutorial">
         <section>
             <article>
-                <h1>Forms</h1>
+                <h1>Styling Miscellaneous Content</h1>
             </article>
         </section>
         <section id="markup">
             <article>
                 <div>
-                    <p>
-                        Forms collect information you want to gather from the user. They fill out the form, submit it, and then it is processed any way you’d like. While you may not need to know how to make a form function, it is good to know and understand how forms  are designed.
-                    </p>
-                    <h2>Interacting with forms</h2>
-                    <div class="col-wrapper margin-btm1">
-                        <div class="col-4">
-                            <form>
-                                <div>
-                                    <label for="fname">First Name:</label>
-                                    <input id="fname" name="fname" type="text" placeholder="John Doe">
-                                </div>
-                                <div>
-                                    <label for="email">Email Address:</label>
-                                    <input id="email" name="email" type="text" placeholder="johndoe@apple.com">
-                                </div>
-                                <div>
-                                    <label for="num">Phone Number:</label>
-                                    <input id="num" id="num" type="tel" placeholder="###-###-####">
-                                </div>
-                                <div>
-                                    <label for="bday">Birthday:</label>
-                                    <input id="bday" name="bday" type="date" placeholder="mm/dd/yyyy">
-                                </div>
-                                <input type="submit" value="Submit">
-                            </form>
-                        </div>
-                        <div class="col-8">
-                            <ol>
-                                <li>
-                                    <p><code><<span class="hidden">*</span>form></code> introduces a form. This is a block element.</p>
-                                </li>
-                                <li>
-                                    <p><code><<span class="hidden">*</span>input></code> displays an input for a user to input information & submit it. This is an inline element.</p>
-                                </li>
-                                <li>
-                                    <p><code><<span class="hidden">*</span>label></code> allows users to understand what the input is for. This is an inline element.</p>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <p>
-                        Click around the inputs above. Hover over the button. Type in an answer. If you click the button, your information is collected inside of the url of your browser.
-                    </p>
-                    <h3>Markup of a form</h3>
-<pre><code class="block"><<span class="hidden">*</span>form>
-    <<span class="hidden">*</span>div>
-        <<span class="hidden">*</span>label for="fname">First Name:<<span class="hidden">*</span>/label>
-        <<span class="hidden">*</span>input id="fname" name="fname" type="text" placeholder="John Doe">
-    <<span class="hidden">*</span>/div>
-    <<span class="hidden">*</span>div>
-        <<span class="hidden">*</span>label for="email">Email Address:<<span class="hidden">*</span>/label>
-        <<span class="hidden">*</span>input id="email" name="email" type="text" placeholder="johndoe@apple.com">
-    <<span class="hidden">*</span>/div>
-    <<span class="hidden">*</span>div>
-        <<span class="hidden">*</span>label for="num">Phone Number:<<span class="hidden">*</span>/label>
-        <<span class="hidden">*</span>id="num" id="num" type="tel" placeholder="###-###-####">
-    <<span class="hidden">*</span>/div>
-    <<span class="hidden">*</span>div>
-        <<span class="hidden">*</span>label for="bday">Birthday:<<span class="hidden">*</span>/label>
-        <<span class="hidden">*</span>input id="bday" name="bday" type="date" placeholder="mm/dd/yyyy">
-    <<span class="hidden">*</span>/div>
-    <<span class="hidden">*</span>input type="submit" value="Submit">
-<<span class="hidden">*</span>/form></code></pre> 
-                <h3>Some Input Types</h3>
-                <p>Enter some information to see what the interaction is like with each input type. <a href="https://www.w3schools.com/html/html_form_input_types.asp">View more here</a></p>
-                <ul>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="button" value="Button">
-                            </code>
-                            <input type="button" value="Button">
-                            <p><strong>Note:</strong>The value puts letters inside of the input</p>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="checkbox" id="check">
-                                <<span class="hidden">*</span><span class="hidden">*</span>label for="check">Checkbox<<span class="hidden">*</span>/label>
-                            </code>
-                            <input type="checkbox" id="check"><label for="check">Checkbox</label>
-                            <p><strong>Note:</strong> If you make the <code>for</code> attribute on the <code>label</code> and the <code>id</code> on the <code>input</code> <em>the same</em>, clicking on the label activates the input. Try it! This is for all labels and inputs.</p>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="date">
-                            </code>
-                            <input type="date">
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="email">
-                            </code>
-                            <input type="email">
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="number">
-                            </code>
-                            <input type="number">
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="password">
-                            </code>
-                            <input type="password">
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="radio"> <<span class="hidden">*</span>label for="radio">Radio<<span class="hidden">*</span>/label>
-                            </code>
-                            <input type="radio" id="radio"> <label for="radio">Radio</label>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="tel">
-                            </code>
-                            <input type="tel">
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="submit">
-                            </code>
-                            <input type="submit" value="submit">
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <code>
-                                <<span class="hidden">*</span>input type="url">
-                            </code>
-                            <input type="url">
-                        </p>
-                    </li>
-                </ul>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div>
-                    <h2>Styling Inputs</h2>
-                    <p>
-                        The form elements are too small for thumbs on mobile devices. Plus the elements are so squished together that it can be hard to read on screens, so styling them and adding more space creates a better design.
-                    </p>
-                    <div class="col-wrapper">
-                        <div class="col-12">
-                            <form id="form-ex" class="margin-btm2">
-                                <div>
-                                    <label for="fname2">First Name:</label>
-                                    <input id="fname2" name="fname" type="text" placeholder="John Doe">
-                                </div>
-                                <div>
-                                    <label for="email2">Email Address:</label>
-                                    <input id="email2" name="email" type="text" placeholder="johndoe@apple.com">
-                                </div>
-                                <div>
-                                    <label for="num2">Phone Number:</label>
-                                    <input id="num2" id="num" type="tel" placeholder="###-###-####">
-                                </div>
-                                <div>
-                                    <label for="bday2">Birthday:</label>
-                                    <input id="bday2" name="bday" type="date" placeholder="mm/dd/yyyy">
-                                </div>
-                                <input type="submit" value="Submit">
-                            </form>
-                        </div>
-                        <div class="col-6">
-<pre><code class="block">#form-ex input {
-    outline: 0;
-    border: 0;
-    border-radius: .25rem;
-    background: #e3e3e3;
-    width: 100%;
-    padding: 1rem;
-    margin: 0 0 2rem 0;
-    font: 400 1rem/1rem "Open Sans";
-}
+                    <h2>Coming soon</h2>
+                    <ul>
+                        <li>
+                            <p>Positioning</p>
+                        </li>
+                        <li>
+                            <p>Rounded corners</p>
+                        </li>
+                        <li>
+                            <p>Background gradients</p>
+                        </li>
+                        <li>
+                            <p>Borders</p>
+                        </li>
+                        <li>
+                            <p>Text shadows</p>
+                        </li>
+                        <li>
+                            <p>Box Shadows</p>
+                        </li>
+                        <li>
+                            <p>Rotations</p>
+                        </li>
+                        <li>
+                            <p>:before and :after</p>
+                        </li>
+                    </ul>
 
-#form-ex input:hover {
-    opacity: .6;
-}
-
-#form-ex label {
-    display: block;
-    margin-bottom: .5rem;
-    font-weight: 500;
-}
-
-#form-ex input[type="submit"] {
-    font-weight: 600;
-}
-</code></pre>
-                        </div>
-                        <div class="col-6">
-                            <ul>
-                                <li>
-                                    <p>The first thing you will want to do is reset your inputs. I set the <code>outline</code> to zero. The outline is the blue outline that shows up when you <i>focus</i> or click inside of an input.</p>
-                                </li>
-                                <li>
-                                    <p>I set the <code>border</code> to 0. Sometimes designs call for borders, but in this case, I didn't want one.</p>
-                                </li>
-                                <li>
-                                    <p>I set the <code>border-radius</code> to .25rem. The <code>border-radius</code> affects the corner roundness.</p>
-                                </li>
-                                <li>
-                                    <p>I set the <code>background-color</code> to a gray color.</p>
-                                </li>
-                                <li>
-                                    <p>I set the <code>width</code> to 100%. This ensures the elements fill the grid as much as possible.</p>
-                                </li>
-                                <li>
-                                    <p>I set the <code>padding</code> to 1rem. This creates an open design. The edges of the input aren't too close to the placeholder.</p>
-                                </li>
-                                <li>
-                                    <p>I set the <code>margin</code> on the bottom to 2rem and 0 everywhere else to make sure the space is only distributed at the bottom. I chose a rather large value so that the inputs wouldn't be so close to the labels below it. Remember <em>spacing is good</em>.</p>
-                                </li>
-                                <li>
-                                    <p>
-                                        I set the fonts to match my body font. The default font is Arial, so it's important to declare for the inputs.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        I set the <code>hover</code> on the <code>input</code>. I wanted the interaction to be clear. The hover state tells the user: You can click me!
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        I set the <code>label</code> o be a <code>block</code> element so it is on a separate line from the <code>input</code> below it.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        I set the <code>label</code>'s and <code>submit</code>'s font weight to 500, 600 (medium, semibold) so it stands out and establishes hierarchy from the input below it.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3>Styling Input Attributes</h3>
-                    <p>Introducec a certain style in CSS by using either a single colon (:) or double colon (::)</p>
-                    <div class="col-wrapper">
-                        <form id="input-ex" class="col-12">
-                            <input type="text" placeholder="johndoe@apple.com">
-                        </form>
-                        <div class="col-12">
-<pre><code class="block"><<span class="hidden">*</span>input type="text" placeholder="johndoe@apple.com"></code></pre>
-                        </div>
-                        <div class="col-12">
-<pre><code class="block">#input-ex input[type="text"]::placeholder {
-    color: #777777;
-}
-
-#input-ex input[type="text"]:focus {
-    color: #2e2e2e;
-    background: #bababa;
-}
-</code></pre>                            
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div>
-                    <h2>Select Dropdown</h2>
-                    <p>There's another form element that can be inside forms but is <em>not</em> an input.</p>
                 </div>
             </article>
         </section>
         <section id="exercise">
             <article>
-                <h2>Exercise 5: Form Design & Coding</h2>
-                <p><a href="https://online.valenciacollege.edu/courses/73698/assignments/1685419">Refer to Canvas</a></p>
+                <h2>Coding Sprint</h2>
+                <p>Coming soon</p>
             </article>
         </section>
         <section id="project">
             <article>
                 <h2>Project 1D: The Menu Page</h2>
-                <p>This week you will create the menu page. Refer to the next tutorial to learn about miscellaneous design elements.</p>
-                <h3>What You'll Turn In</h3>
-                <ul>
-                    <li>
-                        <p>You should be using the same folder that you started in p1A. I recommend <strong><em>duplicating</em></strong> so that you can see your site in stages.</p>
-                        <ul>
-                            <li>
-                                <p>Zip that main folder and rename it <code>lastNameFirstInitial_p1d.zip</code></p>
-                                <ul>
-                                    <li>
-                                        <p><a href="https://online.valenciacollege.edu/courses/73698/assignments/1573590">Submit it to the Project 1C: The Home Page</a>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <p>You will also need to FTP your project to Valencia Web Studio (folder p1c). Submit the link as a comment. <strong>Failure to submit your link to Valencia Web Studio will result in a loss of 10% of your project grade</strong></p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>If you do not submit by the due date, you will receive a 0. If you submit your zip, but not FTP, you will lose 50%.</p>
             </article>
         </section>
         
