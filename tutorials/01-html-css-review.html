@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS Design | GRA 2723C </title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/ilh7abw.css">
+  </head>
+  <body>
+    <aside>
+        <nav id="tutorial-nav">
+            <ul>
+                <li><h4 class="txt-white">Tutorial 1: HTML/CSS Review</h4></li>
+                <li><a href="../index.html" class="navlink">Back Home</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="tutorial">
+        <section>
+            <article>
+                <h1>Typography on the Web</h1>
+            </article>
+        </section>
+        <section id="writing" class="cover">
+            <article>
+                <h2>Describe some best practices for setting up your files and writing HTML/CSS.</h2>
+            </article>
+        </section>
+        
+        <section id="bestpractices">
+            <article>
+                <h3>Best Practices</h3>
+                <div>
+                    <ul>
+                    <li>
+                        <p>Indentation</p>
+                    </li>
+                    <li>
+                        <p>Specificity</p>
+                    </li>
+                        <li>
+                        <p>External CSS</p>
+                    </li>
+                    <li>
+                        <p>Properly name folders, files, html, css, images</p>
+                    </li>
+                    <li>
+                        <p>Commenting</p>
+                        <code> /* CSS */ <br>
+                            &#60;!-- html --&#62;
+                        </code>
+                    </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+            
+            <section id="intro" class="cover">
+            <article>
+                <h2>Contrast block and inline elements.</h2>
+            </article>
+        </section>
+        
+        <section id="blockvsinline">
+            <article>
+                <h3>Block vs. Inline</h3>
+                <div>
+                    <ul>
+                    <li>
+                        <code>h1-h6</code>
+                    </li>
+                    <li>
+                        <code>table</code>
+                    </li>
+                    <li>
+                        <code>header, nav, footer</code>
+                    </li>
+                    <li>
+                        <code>ul, ol</code>
+                    </li>
+                    <li>
+                        <code>div</code>
+                    </li>
+                    <li>
+                        <code>main</code>
+                    </li>
+                    </ul>
+                        <ul>
+                    <li>
+                        <code>a</code>
+                    </li>
+                    <li>
+                        <code>img</code>
+                    </li>
+                    <li>
+                        <code>script</code>
+                    </li>
+                    <li>
+                        <code>button, select, textarea</code>
+                    </li>
+                    <li>
+                        <code>svg</code>
+                    </li>
+                    <li>
+                        <code>strong, em, u</code>
+                    </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        
+        <section id="cssselectors" class="cover">
+            <article>
+                <h2>What are some stylesheet selectors?</h2>
+            </article>
+        </section>
+        
+        <section id="selectors">
+            <article>
+                <h3>Selectors</h3>
+                <div>
+                    <ul>
+                    <li>
+                        <p>HTML Elements</p>
+                        <code>body { background: black; };</code>
+                    </li>
+                    <li>
+                        <p>Classes</p>
+                        <code>.blueText { color: blue; }</code>
+                    </li>
+                    <li>
+                        <p>IDs</p>
+                            <code>#section { display: flex; }</code>
+                    </li>
+                    <li>
+                        <p>:pseudoclass</p>
+                            <code>a:hover { transition: 0.3s all; }</code>
+                    </li>
+                        <li>
+                        <p>::pseudoselectors</p>
+                            <code>p::before {
+                            content: "Hey"; }</code>
+                    </li>
+                        <li>* (selects all elements)</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+            
+        <section id="combinators">
+            <article>
+                <h3>Combinators</h3>
+                <div>
+                    <ul>
+                        <li>div.red</li>
+                        <li>div p</li>
+                        <li>a, a:hover</li>
+                        <li>section + section</li>
+                        <li>div > p</li>
+                        <li>p ~ ul</li>
+                        </ul>
+                </div>
+            </article>
+        </section>
+            
+        <section id="pseudoselectors">
+            <article>
+                <h3>Pseudoselectors</h3>
+                <div>
+                    <ul>
+                    <li>
+                        <code>::first-line</code>
+                    </li>
+                    <li>
+                            <code>::before</code>
+                    </li>
+                    <li>
+                            <code>::after</code>
+                    </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        
+        <section id="pseudoclasses">
+            <article>
+                <h3>Pseudoclasses</h3>
+                <div>
+                    <ul>
+                    <li>
+                        <code>:nth-child()</code>
+                    </li>
+                    <li>
+                            <code>:disabled, :checked, :focused</code>
+                    </li>
+                    <li>
+                            <code>:hover, :active, :visited</code>
+                    </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+            
+        
+            <section id="styles" class="cover">
+            <article>
+                <h2>Styling Elements</h2>
+            </article>
+        </section>
+            
+            <section id="stylingtext">
+            <article>
+                <h3>Styling text</h3>
+                <div>
+                    <ul>
+                        <li class="sidebar">
+                            <ol>
+                                <li>What would the shorthand for these be?</li>
+                                <li>Why use shorthand method?</li>
+                                <li>What are ems and rems?</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <ul>
+                    <li>
+                        <code>
+                            body { <br>
+                                font-family: sans-serif; <br>  
+                                font-size: 18px; <br> 
+                                line-height: 1.5; <br>
+                                color: black; <br>
+                            } <br><br>
+                            h1 { <br>
+                                font-family: sans-serif; <br>
+                                font-size: 24px; <br>
+                                font-weight: 700; <br>
+                                line-height: 1; <br>
+                                text-transform: uppercase; <br>
+                                color: red; <br>
+                            } <br><br>
+                            p { <br>
+                             margin-bottom: 1rem; <br>
+                            } <br>
+                        </code>
+                    </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        
+        <section id="semantics">
+            <article>
+                <h3>When should you use heading tags? Paragraphs? Lists?</h3>
+                <p><a href="https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/">Resource</a>
+            </article>
+        </section>
+        
+        <section id="boxmodel">
+            <article>
+                <h3>Box Model</h3>
+                <div>
+                    <ul>
+                        <li>Includes margins, borders, padding, and content. <a href="https://css-tricks.com/the-css-box-model/">This explains the box model well.</a></li>
+                        </ul>
+                                <ul>
+                        <li>
+                            <code>
+                                * { <br>
+                                    margin: 20px; <br>
+                                    padding: 10px; <br>
+                                width: 200px;<br>
+                                    box-sizing: border-box; <br>
+                                } <br>
+                                </code>
+                            </li>
+                        </ul>
+                </div>
+            </article>
+        </section>
+            
+        <section id="links" class="cover">
+            <article>
+                <h2>Links</h2>
+            </article>
+        </section>
+        
+        <section id="anchor">
+            <article>
+                <h3>What is the href? What is the target? What is _blank?</h3>
+                <code>&#60;a href="https://google.com/" target="_blank"&#62;</code>
+            </article>
+        </section>
+        
+        <section id="images" class="cover">
+            <article>
+                <h2>Images</h2>
+            </article>
+        </section>
+        
+        <section id="img">
+            <article>
+                    <h3>Why do we use an alt attribute?</h3>
+                <code>&#60;img src="../images/background.jpg" alt="A background image of a sunset"&#62;</code>
+            </article>
+        </section>
+        
+        <section id="resizing">
+            <article>
+                <h3>Resizing with css</h3>
+                <p>Use either width or height. The browser will figure out the other.</p>
+            </article>
+        </section>
+        
+        <section id="file">
+            <article>
+                <h3>What file formats are safe to use on the web?</h3>
+                <div>
+                    <ul>
+                    <li>
+                        <code>jpg</code>
+                        <p>Raster images, small file size</p>
+                    </li>
+                    <li>
+                        <code>png</code>
+                        <p>Images with transparent background</p>
+                    </li>
+                    </ul>
+                    <ul>
+                        <li>
+                        <code>gif</code>
+                        <p>Animated images</p>
+                    </li>
+                    <li>
+                        <code>svg</code>
+                        <p>Vector image</p>
+                    </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="../index.html"><span>Back</span><span>To Home</span></a></li>
+                <li><a href="../tutorials/04-ftp.html"><span>Tutorial 4:</span><span>FTP</span></a></li>
+                <li><a href="../tutorials/05-images.html"><span>Tutorial 5:</span><span>Images</span></a></li>
+            </ul>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
